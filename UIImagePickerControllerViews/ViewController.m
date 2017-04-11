@@ -20,28 +20,32 @@
     [super viewDidLoad];
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-}
 
 - (IBAction)buttonToGetImage:(id)sender
 {
+    //getting a image controller
     UIImagePickerController *imageController = [[UIImagePickerController alloc]init];
+    
+    //calls the delegate method from UIImagepicker on the view controller
     imageController.delegate = self;
+    
+    //source of the photo from the user's photo library, can also be from camera but has to call for camera
     imageController.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
     
-    //this will look into the camera source but because the simulator doesnt have one, do not use it.
-    //imageController.sourceType = UIImagePickerControllerSourceTypeCamera;
     
-    //present the "library"
+    //present the photo library
     [self presentViewController:imageController animated:YES completion:nil];
 }
 
 -(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info
 {
+    //initialize image from photo library
     UIImage *image = [info objectForKey:UIImagePickerControllerOriginalImage];
+    
+    //image view will be the image the user picks from library
     self.imageView.image = image;
+    
+    //dismisses the photo library
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
