@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -18,13 +19,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tMf-zt-an1">
-                                <frame key="frameInset" minX="19" minY="28" width="336" height="477"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="adA-EV-mcB">
-                                <frame key="frameInset" minX="115" minY="547" width="145" height="42"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tMf-zt-an1"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="adA-EV-mcB">
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="Select Image"/>
                                 <connections>
@@ -33,6 +29,15 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="adA-EV-mcB" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="99" id="CY5-k5-JMl"/>
+                            <constraint firstItem="tMf-zt-an1" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="I2C-Jj-f1v"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="adA-EV-mcB" secondAttribute="bottom" constant="78" id="XAq-Qx-Zls"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="tMf-zt-an1" secondAttribute="trailing" constant="4" id="XeG-5l-anb"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="adA-EV-mcB" secondAttribute="trailing" constant="99" id="Ywh-CS-BZt"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="tMf-zt-an1" secondAttribute="bottom" constant="162" id="k2K-nP-D4B"/>
+                            <constraint firstItem="tMf-zt-an1" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="3" id="n4U-xT-f6H"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="imageView" destination="tMf-zt-an1" id="BBt-yl-Xb1"/>
