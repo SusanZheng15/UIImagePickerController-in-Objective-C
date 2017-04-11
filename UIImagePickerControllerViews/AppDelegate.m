@@ -2,7 +2,7 @@
 //  AppDelegate.m
 //  UIImagePickerControllerViews
 //
-//  Created by Flatiron School on 6/26/16.
+//  Created by Susan Zheng on 6/26/16.
 //  Copyright © 2016 Flatiron School. All rights reserved.
 //
 
